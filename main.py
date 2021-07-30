@@ -1,4 +1,4 @@
-#!/bin/python 
+#!/bin/env python
 import time
 import sys
 from rich.progress import Progress
@@ -31,7 +31,13 @@ if y in z:
         timer(timer_count*60)
     if y=='h':
         timer(timer_count*3600)
+else:
+    try:
+        timer(int(argument))
+    except:
+        print("Invalid input")
+    
 
-starttime= time.time()
-print(starttime)
+# starttime= time.time()
+# print(starttime)
 print(f"x=>{x} y=>{y} argument => {argument}")
