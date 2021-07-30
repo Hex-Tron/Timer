@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/python 
 import time
 import sys
 from rich.progress import Progress
@@ -9,7 +9,7 @@ if len(sys.argv)==1:
 def timer(x):
     with Progress() as progress:
 
-        task1 = progress.add_task("[green]Downloading...", total=x)
+        task1 = progress.add_task("[green]Timer...", total=x)
 
         while not progress.finished:
             progress.update(task1, advance=0.5)
